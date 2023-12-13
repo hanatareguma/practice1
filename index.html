@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>簡易的なサイトを作成する</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/lightbox.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>CAT</h1>
+
+      <div id="burger" class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+   </div>
+  </header>
+
+
+  <div class="container">
+    <ul class="bxslider">
+      <div class="box"><img src="img/1.jpg" alt=""></div>
+      <div class="box"><img src="img/6.jpg" alt=""></div>
+      <div class="box"><img src="img/2.jpg" alt=""></div>
+      <div class="box"><img src="img/5.jpg" alt=""></div>
+      <div class="box"><img src="img/8.jpg" alt=""></div>
+    </ul>
+
+    <div class="lightbox-wrapper">
+      <div class="box">
+        <a href="img/l-7.jpg" data-lightbox="images" data-title="画像１"><img src="img/l-7.jpg" alt=""></a>
+        <h2>画像１</h2>
+        <p>画像１の説明</p>
+      </div>
+      <div class="box">
+        <a href="img/l-2.jpg" data-lightbox="images" data-title="画像２"><img src="img/l-2.jpg" alt=""></a>
+        <h2>画像２</h2>
+        <p>画像２の説明</p>
+      </div>
+      <div class="box">
+        <a href="img/l-3.jpg" data-lightbox="images" data-title="画像３"><img src="img/l-3.jpg" alt=""></a>
+        <h2>画像３</h2>
+        <p>画像３の説明</p>
+      </div>
+      <div class="box">
+        <a href="img/l-4.jpg" data-lightbox="images2" data-title="画像４"><img src="img/l-4.jpg" alt=""></a>
+        <h2>画像４</h2>
+        <p>画像４の説明</p>
+      </div>
+      <div class="box">
+        <a href="img/l-5.jpg" data-lightbox="images2" data-title="画像５"><img src="img/l-5.jpg" alt=""></a>
+        <h2>画像５</h2>
+        <p>画像５の説明</p>
+      </div>
+      <div class="box">
+        <a href="img/l-6.jpg" data-lightbox="images2" data-title="画像６"><img src="img/l-6.jpg" alt=""></a>
+        <h2>画像６</h2>
+        <p>画像６の説明</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>2023©My Thema</p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+  <script src="js/lightbox.js"></script>
+
+  <script>
+    $(function(){
+      $('.bxslider').bxSlider({
+        mode: 'fade',
+        auto: true,
+        pager: false,
+        controls: false,
+        speed: 2000,
+        pause: 4000,
+      });
+    });
+  </script>
+
+</body>
+</html>
